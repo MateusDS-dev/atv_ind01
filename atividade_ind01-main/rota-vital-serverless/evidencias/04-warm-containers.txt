@@ -1,0 +1,8 @@
+=== sam local start-api --warm-containers LAZY ===
+Três chamadas POST /guias com {"requisicaoId":"R-002","hospital":"H-Caruaru"}
+
+Chamada 1: {"guia": "G-R-002", "hospital": "H-Caruaru", "bolsas": [], "invocacaoNesteAmbiente": 1}
+Chamada 2: {"guia": "G-R-002", "hospital": "H-Caruaru", "bolsas": [], "invocacaoNesteAmbiente": 2}
+Chamada 3: {"guia": "G-R-002", "hospital": "H-Caruaru", "bolsas": [], "invocacaoNesteAmbiente": 3}
+
+Observação: invocacaoNesteAmbiente cresceu (1, 2, 3) — container reutilizado entre chamadas.

@@ -1,0 +1,17 @@
+=== Teste de timeout: demorar=true com Timeout=3 no template.yaml ===
+
+Comando:
+curl -X POST http://127.0.0.1:3000/guias -H "Content-Type: application/json" \
+  -d '{"requisicaoId":"R-003","demorar":true}'
+
+Resposta HTTP:
+HTTP 502
+{"message":"Internal server error"}
+
+Log do SAM:
+Function 'GuiaTransporteFunction' timed out after 3 seconds
+24 Nov 2026 15:20:55,104 [ERROR] (rapid) Invoke failed error=errResetReceived InvokeID=6ca1c6b7-5505-437e-b9f5-5ca1dd99e881
+REPORT RequestId: 6ca1c6b7-5505-437e-b9f5-5ca1dd99e881  Duration: 3000.00 ms  Billed Duration: 3000 ms  Memory Size: 128 MB  Max Memory Used: 128 MB
+Invalid lambda response received: Lambda response must be valid json
+
+Observação: a função dormiu 5 s com time.sleep(5), mas o Timeout de 3 s interrompeu a execução antes.

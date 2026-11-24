@@ -1,0 +1,11 @@
+=== Teste de erro: body sem requisicaoId ===
+
+Comando:
+curl -X POST http://127.0.0.1:3000/guias -H "Content-Type: application/json" \
+  -d '{"hospital":"H-Teste"}'
+
+Resposta:
+HTTP 400
+{"erro": "requisicaoId obrigat\u00f3rio"}
+
+Observação: a validação no handler retornou 400 corretamente.

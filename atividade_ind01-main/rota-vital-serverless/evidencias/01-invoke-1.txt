@@ -1,0 +1,14 @@
+No current session found, using default AWS::AccountId
+Invoking app.lambda_handler (python3.12)
+Local image was not found.
+Removing rapid images for repo public.ecr.aws/sam/emulation-python3.12
+Building image..................................................................................................................................................................................................................................................................................................................................................
+Using local image: public.ecr.aws/lambda/python:3.12-rapid-x86_64.
+
+Mounting /Users/macbookpro/Downloads/rota-vital-serverless/.aws-sam/build/GuiaTransporteFunction as /var/task:ro,delegated, inside runtime container
+SAM_CONTAINER_ID: 4c6723f0032fc934eb760a6d9833d698664cc924a6e93d1d89e1ef8e5ea0bf96
+START RequestId: 109012c4-51a0-4f7f-af83-da086611ee24 Version: $LATEST
+END RequestId: 109012c4-51a0-4f7f-af83-da086611ee24
+REPORT RequestId: 109012c4-51a0-4f7f-af83-da086611ee24	Init Duration: 0.05 ms	Duration: 59.87 ms	Billed Duration: 60 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+{"statusCode": 201, "body": "{\"guia\": \"G-R-001\", \"hospital\": \"H-Recife\", \"bolsas\": [\"O-NEG-0142\"], \"invocacaoNesteAmbiente\": 1}"}
+sam local invoke -e events/pedido.json 2>&1  1.52s user 0.49s system 4% cpu 45.775 total

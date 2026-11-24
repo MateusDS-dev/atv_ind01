@@ -1,0 +1,13 @@
+=== Teste demorar=true com Timeout=10 no template.yaml ===
+
+Comando:
+curl -X POST http://127.0.0.1:3000/guias -H "Content-Type: application/json" \
+  -d '{"requisicaoId":"R-003","demorar":true}'
+
+Resposta:
+HTTP 201
+{"guia": "G-R-003", "hospital": null, "bolsas": [], "invocacaoNesteAmbiente": 1}
+
+Tempo da chamada: 9.439 s (5 s do sleep + overhead do container)
+
+Observação: com Timeout=10, a função teve tempo suficiente para completar o sleep(5) e retornar 201.
