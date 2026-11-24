@@ -102,5 +102,7 @@ Faz sentido em tarefas curtas, sem estado e acionadas por evento ou com demanda 
 ## Uso de IA
 
 - **Claude (Anthropic):** apoio para montar a estrutura do projeto SAM, o `template.yaml`, o rascunho do README e do roteiro do vídeo, e a revisão do repositório contra a rubrica da atividade.
-- **Antigravity (Google DeepMind):** executou comandos (`sam build`, `sam local invoke`, `sam local start-api`, `curl`) e coletou as saídas em texto na pasta `evidencias/`.
 - **Como validei:** <PREENCHER: o que EU executei e conferi pessoalmente, e como validei as respostas>
+
+## VIDEO
+https://youtu.be/omYVfv3yMcA
